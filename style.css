@@ -17,10 +17,11 @@ section.header {
     padding: 2rem;
 }
 
-.grid-size {
+.grid-buttons {
     display: block;
     text-align: center;
     margin: 2rem 1rem;
+    clear: both;
 }
 
 .grid-input {
@@ -28,7 +29,7 @@ section.header {
     height: 2.1rem;
 }
 
-.generate-grid {
+.generate-grid, .grid-clear, .grid-random {
     padding: 0.48rem 1.5rem;
     font-size: 1rem;
     border: none;
@@ -36,7 +37,7 @@ section.header {
     color: white;
 }
 
-section.container {
+div.container {
     height: 100%;
     display: block;
     text-align: center;
