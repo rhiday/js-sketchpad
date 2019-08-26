@@ -18,11 +18,12 @@ function grid(gridCount) {
     
                     div.style.display= 'inline-block';
                     div.style.lineHeight= '0';
-                    div.style.height = '0';
-                    div.style.width = '5%';
-                    div.style.paddingBottom = '5%';
+                    div.style.height = (640 / gridCount) + 'px';
+                    div.style.width = (640 / gridCount) + 'px';
+                    //div.style.paddingBottom = '5%';
                     div.style.border= ('1px solid black');
                     div.style.backgroundColor =('lightpink');
+                    div.classList.add('cell');
     
                     gridRow.appendChild(div);
     
@@ -40,6 +41,14 @@ function grid(gridCount) {
 
 }
 
+function clear() {
+    const cell = document.querySelectorAll('.cell');
+    
+    for(let i = 0; i < cell.length; i++) {
+        cell[i].style.backgroundColor = "lightpink";
+    }
+}
+
 
 const gridSize = document.querySelector('.generate-grid');
 const gridClear = document.querySelector('.grid-clear');
@@ -53,9 +62,7 @@ gridSize.addEventListener('click', () => {
     grid(gridInput);
 });
 
-
-
-
+gridClear.addEventListener('click', clear);
 
 
 /*    
